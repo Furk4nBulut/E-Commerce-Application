@@ -7,6 +7,7 @@ public class Product {
     private int stock;
     private double weight;
     private String description;
+    private int price;
 
     public Product(String name, String color, String category, int stock, double weight, String description) {
         this.name = name;
@@ -75,6 +76,11 @@ public class Product {
         this.description = description;
     }
 
+    public int getPrice() {
+        return price;
+    }
 
-
+    public void setPrice(int price) {
+        this.price = price;
+    }
 }

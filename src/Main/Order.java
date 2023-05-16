@@ -2,10 +2,10 @@ package Main;
 
 public class Order {
     private User user;
-    private Main.Product product;
+    private Product product;
     private CreditCard creditCard;
 
-    public Order(User user, Main.Product product, CreditCard creditCard) {
+    public Order(User user, Product product, CreditCard creditCard) {
         this.user = user;
         this.product = product;
         this.creditCard = creditCard;
@@ -29,7 +29,7 @@ public class Order {
         System.out.println("Payment processed for " + quantity + " " + product.getName() + "(s).");
     }
 
-    public Main.User getUser() {
+    public User getUser() {
         return user;
     }
 
@@ -51,5 +51,13 @@ public class Order {
 
     public void setCreditCard(CreditCard creditCard) {
         this.creditCard = creditCard;
+    }
+
+    public String getQuantity() {
+        return product.getStock() + " " + product.getName() + "(s) available.";
+    }
+
+    public String getOrderTotal() {
+        return "$" + product.getPrice() * product.getStock();
     }
 }

@@ -117,12 +117,20 @@ public class User {
         this.favoriteProducts = favoriteProducts;
     }
 
-    public List<Main.CreditCard> getCreditCards() {
+    public List<CreditCard> getCreditCards() {
         return creditCards;
     }
 
-    public void setCreditCards(List<Main.CreditCard> creditCards) {
+    public void setCreditCards(List<CreditCard> creditCards) {
         this.creditCards = creditCards;
+    }
+
+    public void addHomeAddress(String s, String s1, String anytown, String ca, String number) {
+       this.homeAddress= s + " " + s1 + " " + anytown + " " + ca + " " + number;
+    }
+
+    public void addCreditCard(CreditCard creditCard) {
+        creditCards.add(creditCard);
     }
     // Other getters, setters, and methods specific to the User class
 }
