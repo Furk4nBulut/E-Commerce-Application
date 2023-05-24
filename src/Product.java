@@ -18,7 +18,8 @@ public class Product {
         this.productPrice = 0;
         this.productStock = 0;
     }
-    public Product(String productName, String productDescription, String productCategory, String productBrand, String productColor, int productSize, int productPrice, int productStock){
+    public Product(String productName, String productDescription, String productCategory, String productBrand,
+                   String productColor, int productSize, int productPrice, int productStock){
         this.productName = productName;
         this.productDescription = productDescription;
         this.productCategory = productCategory;
@@ -113,8 +114,11 @@ public class Product {
         this.setProductStock(this.getProductStock() - numberOfProducts);
     }
     //Method 3
+    @Override
     public  String toString(){
-        return "Product Name: " + this.productName + "\nProduct Description: " + this.productDescription + "\nProduct Category: " + this.productCategory + "\nProduct Brand: " + this.productBrand + "\nProduct Color: " + this.productColor + "\nProduct Size: " + this.productSize + "\nProduct Price: " + this.productPrice + "\nProduct Stock: " + this.productStock;
+        return "Product Name: " + this.productName + "\nProduct Description: " + this.productDescription + "\nProduct Category: "
+                + this.productCategory + "\nProduct Brand: " + this.productBrand + "\nProduct Color: " + this.productColor
+                + "\nProduct Size: " + this.productSize + "\nProduct Price: " + this.productPrice + "\nProduct Stock: " + this.productStock;
     }
 
 
