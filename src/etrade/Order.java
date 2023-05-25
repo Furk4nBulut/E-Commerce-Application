@@ -1,4 +1,8 @@
-import java.util.ArrayList;
+package etrade;
+
+import etrade.CreditCard;
+import etrade.Product;
+import etrade.User;
 
 public class Order {
     private User orderUser;
@@ -70,13 +74,13 @@ public class Order {
         }
    }
    public void orderProcess(){
-        if(this.userCreditCard.getCardBalance() >= this.totalPrice){
+        if(this.userCreditCard.getCardBalance() >= this.totalPrice && this.orderedProduct.checkStock() == true){
             this.userCreditCard.setCardBalance(this.userCreditCard.getCardBalance() - this.totalPrice);
             this.orderedProduct.setProductStock(this.orderedProduct.getProductStock() - this.numberOfProducts);
-            System.out.println("Order is completed");
+            System.out.println( this.numberOfProducts+ " " +orderedProduct.getProductName() + " ordered");
         }
         else{
-            System.out.println("Insufficient balance");
+            System.out.println("Insufficient balance or not enough stock");
         }
    }
 

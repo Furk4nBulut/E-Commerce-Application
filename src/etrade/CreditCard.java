@@ -1,3 +1,7 @@
+package etrade;
+
+import etrade.User;
+
 public class CreditCard {
     private String cardNumber;
     private User cardUser;
@@ -5,12 +9,7 @@ public class CreditCard {
     private String securityCode;
     private int cardBalance;
 
-    public CreditCard (){
-        this.cardNumber = "";
-        this.cardUser = new User();
-        this.expirationDate = "";
-        this.securityCode = "";
-    }
+
     public CreditCard(String cardNumber, User cardUser, String expirationDate, String securityCode, int cardBalance){
         this.cardNumber = cardNumber;
         this.cardUser = cardUser;

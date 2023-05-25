@@ -1,3 +1,5 @@
+package etrade;
+
 public class Product {
     private String productName;
     private String productDescription;
@@ -8,16 +10,7 @@ public class Product {
     private int productPrice;
     private int productStock;
 
-    public Product(){
-        this.productName = "";
-        this.productDescription = "";
-        this.productCategory = "";
-        this.productBrand = "";
-        this.productColor = "";
-        this.productSize = 0;
-        this.productPrice = 0;
-        this.productStock = 0;
-    }
+
     public Product(String productName, String productDescription, String productCategory, String productBrand,
                    String productColor, int productSize, int productPrice, int productStock){
         this.productName = productName;
@@ -109,17 +102,13 @@ public class Product {
         }
     }
     //Method 2
-    public void reduceStock(int numberOfProducts){
-
+   /* public void reduceStock(int numberOfProducts){
         this.setProductStock(this.getProductStock() - numberOfProducts);
-    }
+    } unneccessary method
+    */
     //Method 3
-    @Override
-    public  String toString(){
-        return "Product Name: " + this.productName + "\nProduct Description: " + this.productDescription + "\nProduct Category: "
-                + this.productCategory + "\nProduct Brand: " + this.productBrand + "\nProduct Color: " + this.productColor
-                + "\nProduct Size: " + this.productSize + "\nProduct Price: " + this.productPrice + "\nProduct Stock: " + this.productStock;
-    }
-
-
+     @Override
+    public String toString(){
+         return this.productBrand +" "+ this.productName;
+     }
 }

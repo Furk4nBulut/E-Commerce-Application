@@ -1,3 +1,5 @@
+package etrade;
+
 import java.util.ArrayList;
 
 public class User {
@@ -11,17 +13,7 @@ public class User {
     private ArrayList<CreditCard> creditCards;
     private ArrayList<Product> favProducts;
 
-    public User(){
-        this.fullName = "";
-        this.email = "";
-        this.password = "";
-        this.phone = "";
-        this.address = "";
-        this.workAddress = "";
-        this.orderedProducts = new ArrayList<Product>();
-        this.creditCards = new ArrayList<CreditCard>();
-        this.favProducts = new ArrayList<Product>();
-    }
+
     public User(String fullName, String email, String password, String phone, String address, String workAddress){
         this.fullName = fullName;
         this.email = email;
@@ -110,12 +102,12 @@ public class User {
     //Method 1
     public void addProductToFav(Product product){
         this.favProducts.add(product);
-        System.out.println(product.toString()+ " added to favorites");
+        System.out.println(product.toString()+ " Product added to favorites");
     }
 
     public void removeProductFromFav(Product product){
         this.favProducts.remove(product);
-        System.out.println(product.toString()+ " removed from favorites");
+        System.out.println(product.toString()+ " Product removed from favorites");
     }
 
     //Method 2
